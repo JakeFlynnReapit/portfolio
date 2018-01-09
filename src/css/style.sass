@@ -6,10 +6,10 @@ $dark: rgba(0,0,0,.7)
 	to
 		transform: translateY(-15px)
 
-
-html, body
+#root
 	font-family: 'Roboto', sans-serif
 	-webkit-font-smoothing: antialiased
+
 .landing
 	height: 100vh
 	position: relative
@@ -31,7 +31,7 @@ html, body
 		color: #777
 		letter-spacing .1em
 		font-weight: 300
-	p 
+	p
 		padding: 50px 0
 		font-size: 20px
 	i
@@ -40,33 +40,35 @@ html, body
 		position: absolute
 		bottom: 20px
 	.image
-		padding: 5px 
+		padding: 5px
 		width: 120px
 		height: 120px;
 		border-radius: 50%
 		border: 1px solid lightgrey
-		img 
+		img
 			height: 120px
 			width: 120px
 			border-radius: 50%
+
 .section
 	padding: 20px 0
 	border-top: 1px solid lightgrey
-	h3, h5 
+	h3, h5
 		text-align: center
 		margin: 30px 0
-	li 
+	li
 		display: inline-block
 		padding: 10px 20px
 		border: 1px solid $dark
 		margin: 10px
+
 .work
-	.row
-		margin: 10px
 	.columns
 		height: 205px
-		cursor: pointer;
+		margin-bottom: 10px
+		cursor: pointer
 		background-size: cover
+		background-position: center top
 		overflow: hidden
 		.preview
 			height: 100%
@@ -87,7 +89,6 @@ html, body
 			background: rgba(0, 0, 0, 0.8)
 			opacity: 1
 			transform: translateY(0px)
-
 	.configui
 		background-image: url('../images/config-ui.jpg')
 	.rdaforms
@@ -96,39 +97,37 @@ html, body
 		background-image: url('../images/whos-playing.jpg')
 	.thesignlife
 		background-image: url('../images/thesignlife.jpg')
+
 .experience
-	.current
+	.job
+		border: 1px solid lightgrey
+		width: 50%
+		min-width: 300px
+		margin: 20px auto
+		border-radius: 10px
+		text-align: center
 		h5
 			margin: 10px
 			color: rgba(0,167,227,1)
-		border: 1px solid lightgrey
-		width: 50%
-		margin: 0 auto
-		border-radius: 10px
-		text-align: center
-		h6 
+		h6
 			margin: 10px
 			font-size: 20px
-.contact
-	text-align: center
-	a
-		font-size: 22px
-		margin: 10px 0
-		text-decoration: none;
-		display: block
-		color: $dark
+
 footer
 	background: $dark
 	color: white
 	padding: 50px 0
+	text-align: center
+	.six
+		float: none
+		display: inline-block
 	a
-		font-size: 22px
+		font-size: 16px
 		text-decoration: none
 		color: white
 		margin: 0 20px
+		.fa
+			font-size: 22px
 		&:hover
 			color: $dark
-	.eight
-		text-align: right
-
-
+			cursor: pointer
