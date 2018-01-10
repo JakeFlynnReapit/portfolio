@@ -16,7 +16,7 @@ let projects = {
       },
       {
         title: 'Who\'s Playing',
-        description: 'A single-page application which retrieve real-time information on the leaderboards for a popular online game.',
+        description: 'A single-page application built with jQuery that retrieves real-time information on the leaderboards for a popular online game.',
         className: 'whosplaying'
       },
       {
@@ -28,6 +28,11 @@ let projects = {
         title: 'e-Commerce Website',
         description: 'An e-Commerce website built with React.js and Node.js',
         className: 'ecommerce'
+      },
+      {
+        title: 'Playlister',
+        description: 'A single-page application built with React.js which displays playlist information based on real Spotify data.',
+        className: 'playlister'
       }
     ]
   }
@@ -38,7 +43,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div className={'four columns ' + this.props.workItems.className }>
+      <div className={'workColumn ' + this.props.workItems.className }>
         <div className="preview">
           <h4>{this.props.workItems.title}</h4>
           <p>{this.props.workItems.description}</p>
@@ -53,7 +58,10 @@ class Work extends Component {
 
   constructor() {
     super()
-    this.state = {data: projects}
+    this.state = {
+      data: projects,
+      selectedProject: {}
+    }
   }
 
   render() {
@@ -64,7 +72,7 @@ class Work extends Component {
           {this.state.data.workItems.cases.map((project, index) =>
             <Project workItems={project} key={index} />
           )}
-    		</div>
+        </div>
     	</div>
     )
   }
