@@ -1,4 +1,4 @@
-@import 'colourPalette.sass';
+@import 'colourPalette.sass'
 
 @keyframes bounce
 	from
@@ -9,6 +9,20 @@
 #root
 	font-family: 'Roboto', sans-serif
 	-webkit-font-smoothing: antialiased
+	color: $dark
+
+h1
+	font-size: 50px
+	line-height: 1.10227
+	font-weight: 500
+	letter-spacing: -.025em
+	margin: 20px 0
+.subheading
+	font-size: 20px
+	text-transform: uppercase
+	color: #777
+	letter-spacing .1em
+	font-weight: 300
 
 .landing
 	height: 100vh
@@ -18,19 +32,6 @@
 	flex-direction: column
 	align-items: center
 	text-align: center
-	color: $dark
-	h1
-		font-size: 50px
-		line-height: 1.10227
-		font-weight: 500
-		letter-spacing: -.025em
-		margin: 20px 0
-	.subheading
-		font-size: 20px
-		text-transform: uppercase
-		color: #777
-		letter-spacing .1em
-		font-weight: 300
 	p
 		padding: 50px 0
 		font-size: 20px
@@ -63,7 +64,7 @@
 		margin: 10px
 
 .work
-	.container
+	.flex
 		display: flex
 		justify-content: space-between
 		flex-flow: row wrap
@@ -103,6 +104,20 @@
 	.thesignlife
 		background-image: url('../images/thesignlife.jpg')
 
+	.half-side
+		width: calc(50% - 20px)
+		padding-right: 20px
+		display: inline-block
+		vertical-align: top
+		img
+			width: 100%
+			margin-bottom: 50px
+			border-radius: 5px
+		.button
+			margin: 1rem
+			padding: 0 20px
+			font-size: 10px
+
 .experience
 	.job
 		border: 1px solid lightgrey
@@ -137,5 +152,10 @@ footer
 			color: $dark
 			cursor: pointer
 @media (max-width: 750px)
-	.work .workColumn
-		width: 100%
+	.work
+		.workColumn
+			width: 100%
+		.half-side
+			width: auto
+			img
+				padding: 0
