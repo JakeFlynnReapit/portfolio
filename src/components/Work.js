@@ -3,6 +3,8 @@ import ConfigUI from '../pages/Work/ConfigUI';
 import Rdaforms from '../pages/Work/Rdaforms';
 import Thesignlife from '../pages/Work/Thesignlife';
 import Whosplaying from '../pages/Work/Whosplaying';
+import Ecommerce from '../pages/Work/Ecommerce';
+import Playlister from '../pages/Work/Playlister';
 
 let projects = {
 
@@ -55,7 +57,10 @@ class Project extends Component {
     return (
       <div className={'workColumn ' + this.props.workItems.className }>
         <div className="preview"
-             onClick={this.props.handleClick}>
+             onClick={
+               pageName => this.props.handleClick(this.props.workItems.page)
+             }
+             >
           <h4>{this.props.workItems.title}</h4>
           <p>{this.props.workItems.description}</p>
         </div>
@@ -76,9 +81,28 @@ class Work extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-    this.setState({selectedProject: this.props.page})
-    console.log(this.state)
+  handleClick(pageName) {
+    this.setState({selectedProject: pageName})
+  }
+
+  selectedProject() {
+      var selectedProject = this.state.selectedProject
+      if(selectedProject === 'close'){
+        this.setState({selectedProject: null})
+      }
+      if(selectedProject === 'ConfigUI'){
+        return <ConfigUI />
+      } else if(selectedProject === 'Rdaforms'){
+        return <Rdaforms />
+      } else if(selectedProject === 'Whosplaying'){
+        return <Whosplaying />
+      } else if(selectedProject === 'Thesignlife'){
+        return <Thesignlife />
+      } else if(selectedProject === 'Ecommerce'){
+        return <Ecommerce />
+      } else if(selectedProject === 'Playlister'){
+        return <Playlister />
+      }
   }
 
   render() {
@@ -95,6 +119,9 @@ class Work extends Component {
             />
           )}
         </div>
+        { this.state.selectedProject &&
+          this.selectedProject()
+        }
     	</div>
     )
   }
