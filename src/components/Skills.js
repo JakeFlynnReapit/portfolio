@@ -21,6 +21,8 @@ const skillsArr = [
 
 const newSkills = [
   "Node.js",
+  "Express.js",
+  "MongoDB",
   "Php"
 ]
 

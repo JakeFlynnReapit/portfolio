@@ -4,7 +4,10 @@ class ConfigUI extends Component {
   render() {
     return (
       <div className="container configui-page">
-        <div className="closeWorkItem">
+        <div className="closeWorkItem"
+             onClick={
+               pageName => this.props.handleClick(null)
+             }>
           <i className="fa fa-times"/>
         </div>
         <h1>Configuration UI</h1>

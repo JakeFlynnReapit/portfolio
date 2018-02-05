@@ -5,6 +5,12 @@ class Thesignlife extends Component {
   render() {
     return (
       <div className="container thesignlife-page">
+        <div className="closeWorkItem"
+             onClick={
+               pageName => this.props.handleClick(null)
+             }>
+          <i className="fa fa-times"/>
+        </div>
         <h1>The Sign Life</h1>
         <h2 className="subheading">Branding, HTML/SASS</h2>
         <div className="half-side thesignlife-page">

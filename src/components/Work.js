@@ -86,23 +86,23 @@ class Work extends Component {
   }
 
   selectedProject() {
-      var selectedProject = this.state.selectedProject
-      if(selectedProject === 'close'){
-        this.setState({selectedProject: null})
-      }
-      if(selectedProject === 'ConfigUI'){
-        return <ConfigUI />
-      } else if(selectedProject === 'Rdaforms'){
-        return <Rdaforms />
-      } else if(selectedProject === 'Whosplaying'){
-        return <Whosplaying />
-      } else if(selectedProject === 'Thesignlife'){
-        return <Thesignlife />
-      } else if(selectedProject === 'Ecommerce'){
-        return <Ecommerce />
-      } else if(selectedProject === 'Playlister'){
-        return <Playlister />
-      }
+    var selectedProject = this.state.selectedProject
+    if(selectedProject === 'close'){
+      this.setState({selectedProject: null})
+    }
+    if(selectedProject === 'ConfigUI'){
+      return <ConfigUI handleClick={this.handleClick} />
+    } else if(selectedProject === 'Rdaforms'){
+      return <Rdaforms handleClick={this.handleClick} />
+    } else if(selectedProject === 'Whosplaying'){
+      return <Whosplaying handleClick={this.handleClick} />
+    } else if(selectedProject === 'Thesignlife'){
+      return <Thesignlife handleClick={this.handleClick} />
+    } else if(selectedProject === 'Ecommerce'){
+      return <Ecommerce handleClick={this.handleClick} />
+    } else if(selectedProject === 'Playlister'){
+      return <Playlister handleClick={this.handleClick} />
+    }
   }
 
   render() {
