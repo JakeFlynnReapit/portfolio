@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import Landing from './components/Landing';
-import Skills from './components/Skills';
-import Work from './components/Work';
-import Experience from './components/Experience';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Work from './pages/Work.js';
+import Landing from './pages/Landing';
 
 class App extends Component {
   render() {
-    return(
-      <div>
-        <Landing />
-        <Skills />
-        <Work />
-        <Experience />
-        <Footer />
-      </div>
+    return (
+      <Router>
+				<div>
+	        <Switch>
+	          <Route exact path="/" component={Landing} />
+	          <Route path="/work/" component={Work} />
+	        </Switch>
+				</div>
+      </Router>
     )
   }
 }
