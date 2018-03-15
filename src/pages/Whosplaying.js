@@ -18,7 +18,7 @@ class Whosplaying extends Component {
 						<p>Since there is no API for the game's data, I had to get around this in a hacky way.</p>
 	          <p>I achieved the end result by making an ajax call to the games website that listed all of the teams, iterating through each team and checking the last played time. If that time was within the last hour then it was displayed.</p>
 	          <p>It was a challenge to get this to work without any resources available, but I managed to get there in the end.</p>
-						<a href="https://github.com/jakeswork/whosplaying/blob/master/js/app.js" target="_blank" rel="noopener noreferrer" className="button">View Source</a>
+						<a href="http://whosplaying.000webhostapp.com/" target="_blank" rel="noopener noreferrer" className="button">View Demo</a>
 						<Link to="/work/" className="button">Portfolio</Link>
 				</div>
 	        <div className="half-side img">
