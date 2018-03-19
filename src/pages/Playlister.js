@@ -20,7 +20,7 @@ class Playlister extends Component {
 						<Link to="/work/" className="button">Portfolio</Link>
 				</div>
 	        <div className="half-side img">
-						<img src={require('../images/playlister.jpeg')} alt="" />
+						<img src={require('../images/playlister.jpg')} alt="" />
 	        </div>
 				</div>
       </div>

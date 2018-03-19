@@ -14,9 +14,9 @@ class Wmglazing extends Component {
 	        <div className="half-side">
 	          <p>This was a brochure website created for a window company based in Birmingham.</p>
 						<p>They came to me as their current website was quite outdated, and they wanted the ability to upload photos themselves.</p>
-						<p>I decided to use the Dropbox API to display their galary images since they were using Dropbox to share photos anyway, and this allowed them to have control over the images on their site without the weight of a full CMS.</p>
+						<p>I decided to use the Dropbox API to display their gallery images since they were using Dropbox to share photos anyway, and this allowed them to have control over the images on their site without the weight of a full CMS.</p>
 						<p>I really enjoyed working on this project alongside WM Glazing and I'm very happy with the outcome.</p>
-						<a href="http://www.wmglazing.co.uk/" target="_blank" rel="noopenner noreferrer" className="button">In progress</a>
+						<a href="http://www.wmglazing.co.uk/" target="_blank" rel="noopener noreferrer" className="button">In progress</a>
 						<Link to="/work/" className="button">Portfolio</Link>
 				</div>
 	        <div className="half-side img">
