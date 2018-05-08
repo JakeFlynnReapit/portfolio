@@ -44,6 +44,11 @@ let projects = {
         description: 'A single-page application built with React.js which displays playlist information based on real Spotify data.',
         className: 'playlister',
 				path: '/playlister/'
+      }, {
+        title: 'Shaunas',
+        description: 'An invitation form used to send out to people and receive feedback on whether or not they are going, and an application that reads the responses.',
+        className: 'shaunas',
+        path: '/shaunas/'
       }
     ]
   }
